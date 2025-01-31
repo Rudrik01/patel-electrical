@@ -326,7 +326,7 @@
             cursor: pointer;
         }
 
-        /* Footer */
+        /* Footer
         footer {
             background: var(--dark);
             color: var(--light);
@@ -374,7 +374,96 @@
             margin-top: 3rem;
             padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
-        }
+        }*/
+        /* Footer */
+footer {
+    background: var(--primary);
+    color: var(--light);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section h3 {
+    color: var(--secondary);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    color: var(--light);
+    line-height: 1.6;
+}
+
+.footer-links a {
+    color: var(--light);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+    background: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light);
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--accent);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    color: var(--light);
+    letter-spacing: 1px;
+}
+
+/* Add subtle hover effect on footer section cards */
+.footer-section {
+    transition: transform 0.3s ease;
+}
+
+.footer-section:hover {
+    transform: translateY(-5px);
+}
+
+
+
 
         @media (max-width: 768px) {
             @media (max-width: 768px) {
@@ -401,6 +490,17 @@
                 .cta-container {
                     flex-direction: column;
                     gap: 1rem;
+                }
+                footer {
+                    padding: 3rem 1rem;
+                }
+            
+                .footer-content {
+                    grid-template-columns: 1fr;
+                }
+            
+                .footer-links a {
+                    font-size: 1rem;
                 }
             }
         }
@@ -621,6 +721,7 @@
             <p>&copy; 2023 Patel Electrical. All rights reserved</p>
         </div>
     </footer>
+    
 
     <script>
         // Smooth Scroll
